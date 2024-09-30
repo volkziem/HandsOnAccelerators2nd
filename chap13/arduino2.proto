@@ -1,0 +1,5 @@
+# arduino2.proto
+Terminator = LF;
+set_bit{out "DO\$1 %i"; ExtraInput = Ignore;}
+get_bit{out "DI\$1?"; in "DI\$1 %i";  ExtraInput = Ignore;}
+get_analog {out "A\$1?"; in "A\$1 %f"; ExtraInput = Ignore;}

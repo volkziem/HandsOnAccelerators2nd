@@ -1,0 +1,18 @@
+# arduino2.db
+record(ao, "$(USER):DO5") {
+   field(DESC, "Arduino digital output pin 5")
+   field(DTYP, "stream")
+   field(OUT, "@arduino2.proto set_bit(5) $(PORT)")
+}
+record(ai, "$(USER):DI4") {
+   field(DESC, "Arduino digital input pin 4")
+   field(SCAN, "1 second")
+   field(DTYP, "stream")
+   field(INP, "@arduino2.proto get_bit(4) $(PORT)")
+}
+record(ai, "$(USER):A0") {
+   field(DESC, "Arduino analog pin 0")
+   field(SCAN, "5 second")
+   field(DTYP, "stream")
+   field(INP, "@arduino2.proto get_analog(0) $(PORT)")
+}
